@@ -1,0 +1,115 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fnil\fcharset0 SFUIText-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid101\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\margl1440\margr1440\vieww21040\viewh14080\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs72 \cf0 Photograph Overview\
+
+\fs24 \
+
+\b0 The Photograph app uses OAuth 2.0 to authenticate the app and makes use of the following endpoints provided by the Instagram API:\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	1.	}Media - (tag based search)\
+{\listtext	2.	}Likes - (POST & DELETE)\
+{\listtext	3.	}User - (self profile)\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b\fs36 \cf0 \'97 Feed Controller \'97
+\b0\fs24 \
+\
+
+\b\fs28 Media
+\b0\fs24 \
+The app fetches media posts that contain the tag 
+\i gameofthrones
+\i0 . This tag has been hard-coded into the app. Media elements display the following information:\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls2\ilvl0\cf0 {\listtext	1.	}Username of posting profile\
+{\listtext	2.	}Media element (image)\
+{\listtext	3.	}Like status (with respect to current user)\
+{\listtext	4.	}Number of likes\
+{\listtext	5.	}Caption\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+
+\b Possible Next Step:
+\b0  The code has been structured in a way to make tag based searching a possibility in the future. Implementing the search will only require adding a search bar and passing the relevant information to the class making the API call.\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b\fs28 \cf0 Likes
+\fs36 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b0\fs24 \cf0 The app lets the user like and unlike all media elements been displayed by clicking a button underneath the media element. This button also denotes the state of the media element (liked/not liked) with respect to the current user.\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b\fs28 \cf0 Additional Functionality\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b0\fs24 \cf0 The feed controller implements the pull to refresh functionality, which fetches any new media elements and also updated the state of the existing media elements (such as changes to the number of likes OR the current user liking/un-liking a media element by logging in from a different place.\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b\fs36 \cf0 \'97 Profile View \'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b0\fs28 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs24 \cf0 The app displays the user profile. This profile is static in the sense that it\'92s not refreshed when any changes are made to the data being represented in the profile. The profile is loaded when the app is launched.
+\fs28 \
+\
+
+\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b\fs36 \cf0 \'97 Credentials \'97
+\b0\fs24 \
+The app can be tested using the following credentials:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b \cf0 Username: 
+\b0 jonknowssomething\
+
+\b Password:
+\b0  testitnow\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b\fs36 \cf0 \'97 Known Limitations & Assumptions \'97
+\b0\fs24 \
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls3\ilvl0\cf0 {\listtext	\'95	}The app currently does not handle scenarios where the device running the app cannot access the network (Wifi or WAN). The app makes the assumption that a network connection will be available at all times\
+{\listtext	\'95	}The app does not handle any errors in retrieving data from the API endpoints. The app makes the assumption that data will always be retrieved successfully on making the correct call to the relevant endpoint.\
+{\listtext	\'95	}The app currently does not persist the access token and requires a user action to fetch the token each time the app is launched.\
+{\listtext	\'95	}During the OAuth process, when the app is requesting permissions for the first time - the app faces a caching issue where Instagram displays an error page instead of the permissions page. I\'92m currently trying to debug this issue. The workaround is relaunching the app when that cookies related error page appears. Everything works smoothly after relaunching the app.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b\fs36 \cf0 \'97 Next Steps \'97
+\b0\fs24 \
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls4\ilvl0\cf0 {\listtext	\'95	}Using Apple\'92s {\field{\*\fldinst{HYPERLINK "https://developer.apple.com/library/content/samplecode/Reachability/Introduction/Intro.html"}}{\fldrslt Reachability}} classes to monitor network availability and changes and accordingly make the user aware of the situation during login or loading the feed/user profile. \
+{\listtext	\'95	}Using CoreData to persist the access token. By doing so, the app, on being launched, will check if a token exists and proceed to verify if the token is still valid. Once that step is done - the app will present the user with the relevant view based on the result of the token validation.\
+{\listtext	\'95	}The code to load the user profile is written in such a way that the user profile can be refreshed anytime. The ideal next step will be to initiate the refresh operation based on a certain user event (such as user tapping the profile tab, etc.).\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+}
